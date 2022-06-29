@@ -42,6 +42,8 @@ module.exports = {
 }
 
 4.使用husky进行强制git 代码提交规范
+npm install --save-dev @commitlint/config-conventional@12.1.4 @commitlint/cli@12.1.4
+
 npm install husky@7.0.1 --save-dev
 npx husky install
 
