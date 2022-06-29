@@ -75,13 +75,24 @@ module.exports = {
     }
 }
 
-5.在package.json中新增指令并执行
+6.在package.json中新增指令并执行
 "prepare":"husky install"
 npm run prepare
 
-6.新增husky配置文件 并往里面写入
+7.新增husky配置文件 并往里面写入
 运行:npx husky add .husky/commit-msg
 打开commit-msg文件，把里面的undefined替换为npx --no-install commitlint --edit
 
+8.使用husky强制代码格式 创建配置文件
+npx husky add .husky/pre-commit
 
+9.往第八步生成的文件中写入的undefined修改为npx lint-staged
+
+10.把package.json 文件的lint-staged修改为
+"lint-staged":{
+    "src/**/*.{js,vue}":[ // src目录下所有的js和vue文件
+    "eslint --fix",//自动修复
+    "git add" // 自动提交时修复
+    ]
+}
 
