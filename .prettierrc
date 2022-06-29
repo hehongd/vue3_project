@@ -1,0 +1,8 @@
+{
+    // 分号来结尾
+    "semi": false,
+    // 是否使用单引号
+    "singleQuote": true,
+    // 是否以最后一段话，以逗号结尾
+    "trailingComma": "none"
+}
